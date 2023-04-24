@@ -33,7 +33,7 @@ public class DepartmentController {
     }
 
     @GetMapping("/{id}")
-    public Department findById(@PathVariable Long id) {
+    public Department findById(@PathVariable("id") Long id) {
         LOGGER.info("Department find: id={}", id);
         return repository.findById(id);
     }
